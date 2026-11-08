@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filosofía en vinilo · Playlist filosófica</title>
+<meta name="description" content="Playlist filosófica del II Mes de la Filosofía del IES Valle del Jerte: una historia de la filosofía en 23 canciones.">
+<style>
+:root{--ink:#191838;--ink2:#24224B;--line:#3A3770;--pink:#F43870;--sun:#F7B731;--cream:#FFF4E4;--mute:#B9B6D9}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--ink);color:var(--cream);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif}
+a{color:var(--sun)}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 40px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:22px}
+.eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);font-weight:800}
+h1{margin:4px 0 0;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:clamp(34px,5vw,56px);line-height:1;color:var(--cream)}
+h1 b{font-style:normal;font-family:inherit;color:var(--sun)}
+.sub{color:var(--mute);font-size:15px;max-width:460px}
+.main{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:28px}
+@media (max-width:860px){.main{grid-template-columns:1fr}}
+/* tocadiscos */
+.deck{background:var(--ink2);border:1.5px solid var(--line);border-radius:18px;padding:22px}
+.turntable{position:relative;width:100%;max-width:420px;aspect-ratio:1;margin:0 auto}
+.vinyl{position:absolute;inset:4%;border-radius:50%;
+  background:radial-gradient(circle at 50% 50%,transparent 0 31%,#0c0b18 31.5%),
+  repeating-radial-gradient(circle at 50% 50%,#121122 0 2px,#1d1b33 2px 3px);
+  box-shadow:0 10px 30px rgba(0,0,0,.5),inset 0 0 0 6px #0c0b18}
+.vinyl::after{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 40deg,rgba(255,255,255,.08) 55deg,transparent 70deg 220deg,rgba(255,255,255,.06) 235deg,transparent 250deg)}
+.vinyl.spin{animation:spin 3.2s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.label{position:absolute;inset:33%;border-radius:50%;background:var(--era,#F43870);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8%;color:var(--ink);box-shadow:inset 0 0 0 3px rgba(0,0,0,.15)}
+.label .n{font-family:Georgia,serif;font-weight:700;font-size:clamp(28px,5vw,40px);line-height:1}
+.label .e{font-size:clamp(8px,1.2vw,10px);font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-top:4px;line-height:1.15}
+
+.arm{position:absolute;top:-2%;right:-1%;width:36%;height:62%;transform-origin:82% 8%;transform:rotate(-18deg);transition:transform .8s ease}
+.arm.on{transform:rotate(4deg)}
+.arm svg{width:100%;height:100%}
+.controls{display:flex;justify-content:center;align-items:center;gap:14px;margin:18px 0 6px}
+.btn{width:52px;height:52px;border-radius:50%;border:2px solid var(--line);background:var(--ink);color:var(--cream);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.btn:hover{border-color:var(--sun)}
+.btn.play{width:68px;height:68px;background:var(--pink);border-color:var(--pink);font-size:26px}
+.now{text-align:center;min-height:46px}
+.now .t{font-weight:800;font-size:18px}
+.now .a{color:var(--mute);font-size:14px}
+.player{margin-top:14px;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#000;border:1.5px solid var(--line)}
+.player > *{width:100%;height:100%;display:block}
+.hint{font-size:12px;color:var(--mute);text-align:center;margin-top:8px}
+/* ficha */
+.card{background:var(--cream);color:var(--ink);border-radius:18px;padding:24px 26px;position:relative;overflow:hidden;align-self:start}
+.card .era{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;background:var(--era,#F43870);color:var(--ink);padding:5px 10px;border-radius:999px}
+.card h2{font-family:Georgia,serif;font-size:clamp(26px,3vw,34px);margin:12px 0 2px;line-height:1.1}
+.card .song{color:#5A5680;font-size:15px;margin-bottom:14px}
+.card p{margin:0 0 12px;line-height:1.5;font-size:16px}
+.card blockquote{margin:14px 0;padding:10px 16px;border-left:5px solid var(--pink);font-family:Georgia,serif;font-style:italic;font-size:18px;line-height:1.4;background:#FBE7EC;border-radius:0 10px 10px 0}
+.card blockquote small{display:block;font-style:normal;font-family:system-ui,sans-serif;font-size:13px;color:#5A5680;margin-top:6px}
+.card .q{display:flex;gap:10px;align-items:flex-start;background:var(--ink);color:var(--cream);border-radius:12px;padding:12px 14px;font-weight:600;line-height:1.4}
+.card .q span{color:var(--sun);font-size:20px;line-height:1}
+/* lista */
+.list{margin-top:28px;background:var(--ink2);border:1.5px solid var(--line);border-radius:18px;padding:10px 0}
+.sec{padding:14px 22px 6px;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--sun);display:flex;align-items:center;gap:10px}
+.sec::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--c)}
+.sec::after{content:"";flex:1;height:1px;background:var(--line)}
+.tr{display:grid;grid-template-columns:38px 1fr auto;gap:12px;align-items:center;padding:9px 22px;cursor:pointer;border-left:4px solid transparent}
+.tr:hover{background:rgba(255,255,255,.04)}
+.tr.on{background:rgba(244,56,112,.14);border-left-color:var(--pink)}
+.tr .num{font-family:Georgia,serif;font-weight:700;font-size:18px;color:var(--mute);text-align:right}
+.tr.on .num{color:var(--pink)}
+.tr .tt{font-weight:700}
+.tr .ar{color:var(--mute);font-size:14px}
+.tr .ph{font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--ink);background:var(--c);padding:3px 9px;border-radius:999px;white-space:nowrap}
+.tr.inter .tt{font-style:italic;font-weight:600}
+.tr.inter .ph{background:transparent;color:var(--mute);border:1px solid var(--line)}
+@media (max-width:560px){.tr{grid-template-columns:30px 1fr}.tr .ph{display:none}}
+a.yt{display:inline-block;margin-top:14px;font-weight:800;font-size:14px;color:var(--ink);background:var(--sun);padding:8px 14px;border-radius:999px;text-decoration:none}
+.err{display:none;margin-top:10px;background:#FBE7EC;color:var(--ink);border-radius:10px;padding:10px 12px;font-size:14px;font-weight:600}
+.local{display:none;background:var(--sun);color:var(--ink);font-weight:700;border-radius:12px;padding:12px 16px;margin-bottom:18px;font-size:15px}
+footer{margin-top:26px;font-size:13px;color:var(--mute);text-align:center;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="local" id="local">Estás abriendo el disco como archivo en tu ordenador: así YouTube no deja reproducir las canciones. Para que suenen, publica el disco en una web (WordPress, Google Sites…) o usa los enlaces «Escuchar en YouTube».</div>
+<header>
+  <div>
+    <div class="eyebrow">II Mes de la Filosofía · IES Valle del Jerte</div>
+    <h1>Filosofía en <b>vinilo</b></h1>
+  </div>
+  <div class="sub">Una historia de la filosofía en 23 canciones: de los pitagóricos a Foucault. Pulsa ▶ y deja que el disco gire.</div>
+</header>
+
+<div class="main">
+  <section class="deck">
+    <div class="turntable">
+      <div class="vinyl" id="vinyl"><div class="label" id="label"><div class="n" id="lnum">1</div><div class="e" id="lera">Obertura</div></div></div>
+      <div class="arm" id="arm"><svg viewBox="0 0 100 170"><circle cx="82" cy="12" r="10" fill="#B9B6D9"/><circle cx="82" cy="12" r="4" fill="#191838"/><path d="M82 12 L70 120 L46 150" fill="none" stroke="#B9B6D9" stroke-width="5" stroke-linecap="round"/><rect x="34" y="144" width="22" height="14" rx="3" fill="#F7B731" transform="rotate(35 45 151)"/></svg></div>
+    </div>
+    <div class="controls">
+      <button class="btn" id="prev" aria-label="Pista anterior">⏮</button>
+      <button class="btn play" id="play" aria-label="Reproducir o pausar">▶</button>
+      <button class="btn" id="next" aria-label="Pista siguiente">⏭</button>
+    </div>
+    <div class="now"><div class="t" id="ntitle"></div><div class="a" id="nartist"></div></div>
+    <div class="player"><div id="yt"></div></div>
+    <div class="err" id="err">Este vídeo no se puede reproducir aquí. Usa el enlace «Escuchar en YouTube» de la ficha.</div>
+    <div class="hint">Al terminar cada canción, el disco pasa solo a la siguiente pista.</div>
+  </section>
+
+  <section class="card" id="card"></section>
+</div>
+
+<div class="list" id="list"></div>
+
+<footer>
+  Playlist filosófica del Departamento de Filosofía del IES Valle del Jerte (Cabezuela del Valle – Navaconcejo) · Noviembre de 2026.<br>
+  Las canciones se reproducen desde YouTube; todos los derechos pertenecen a sus autores.
+</footer>
+</div>
+
+<script>
+const ERAS={
+  ob:{n:'Obertura',c:'#F7B731'},
+  pre:{n:'I · Presocráticos',c:'#F7B731'},
+  cla:{n:'II · Grecia clásica',c:'#F48A5B'},
+  hel:{n:'III · Helenismo',c:'#F43870'},
+  med:{n:'IV · Antigüedad tardía y Edad Media',c:'#C85BD9'},
+  mod:{n:'V · Edad Moderna',c:'#7B8CFF'},
+  con:{n:'VI · Edad Contemporánea',c:'#4FC3A1'},
+  ci:{n:'Cierre',c:'#4FC3A1'}
+};
+const T=[
+ {id:'GhVE-8HeF5U',e:'ob',i:1,t:'Segundo movimiento: Mierda de filosofía',a:'Robe',f:'¿Para qué sirve la filosofía?',
+  x:'Abrimos el disco con una provocación. Desconfiar de la filosofía, quejarse de ella o pensar que no sirve para nada… ya es una forma de filosofar: hacerse preguntas sobre el sentido de lo que hacemos.',
+  c:'Hay que filosofar incluso para demostrar que no hay que filosofar.',cs:'Argumento atribuido a Aristóteles (Protréptico)',p:'¿Se puede vivir sin hacerse preguntas?'},
+ {id:'y0M73xj4bWg',e:'pre',t:'Los Llamados Pitagóricos',a:'Alcalá Norte',f:'Pitágoras y los pitagóricos',
+  x:'Para los pitagóricos (s. VI a. C.), el principio de todas las cosas es el número: el universo es orden, proporción y armonía, como la música. Formaban una comunidad con sus propias normas de vida y creían en la transmigración de las almas.',
+  c:'Supusieron que los elementos de los números eran los elementos de todas las cosas.',cs:'Aristóteles sobre los pitagóricos, Metafísica I',p:'¿Es el mundo, en el fondo, matemático?'},
+ {id:'kckTQJ1bbNc',e:'pre',t:'El río de Heráclito',a:'Release',f:'Heráclito de Éfeso',
+  x:'Todo fluye (panta rei): la realidad es cambio constante y lucha de contrarios, pero ese devenir sigue una ley racional, el logos.',
+  c:'No es posible bañarse dos veces en el mismo río.',cs:'Heráclito, fragmento 91',p:'Si todo cambia, ¿sigues siendo la misma persona que hace cinco años?'},
+ {id:'-HHNAT7G8E4',e:'pre',t:'Empedocles',a:'Isaac Bishop',f:'Empédocles de Agrigento',
+  x:'Todo está hecho de cuatro raíces: tierra, agua, aire y fuego. Dos fuerzas las mueven: el Amor, que las une, y el Odio, que las separa. Un presocrático muy de nuestra Olimpiada: el amor como fuerza que hace el mundo.',
+  c:'Unas veces todo se reúne en uno por el Amor; otras, cada cosa se separa por el Odio.',cs:'Empédocles, fragmento 17',p:'¿Es el amor lo que mantiene unido el universo… y a nosotros?'},
+ {id:'j_cOUWdgmSU',e:'pre',inter:true,t:'¿Quiénes somos? ¿De dónde venimos? ¿A dónde vamos?',a:'Siniestro Total',f:'Interludio: las grandes preguntas',
+  x:'Siniestro Total convirtió en estribillo las preguntas de siempre. Kant las resumió en cuatro: ¿qué puedo saber?, ¿qué debo hacer?, ¿qué me cabe esperar? y ¿qué es el ser humano?',
+  c:'¿Qué es el hombre?',cs:'Kant, Lógica: la pregunta que reúne a todas las demás',p:'¿Cuál de estas preguntas te parece más difícil de responder?'},
+ {id:'Z0kXyDg9GiU',e:'cla',t:'Platón',a:'El Otro Yo',f:'Platón (y su maestro Sócrates)',
+  x:'Platón distingue entre el mundo sensible, cambiante y engañoso, y el mundo de las Ideas, verdadero y eterno. En la alegoría de la caverna, conocer es liberarse de las sombras. En El banquete, el amor es el impulso que nos eleva hacia la belleza y el saber.',
+  c:'Una vida sin examen no merece ser vivida por el hombre.',cs:'Sócrates, en la Apología de Platón (38a)',p:'¿Y si lo que das por real fueran solo sombras en la pared?'},
+ {id:'4fWFiqx6GwM',e:'cla',t:'Aristóteles lo dijo',a:'Paco Ibáñez',f:'Aristóteles',
+  x:'Discípulo de Platón y maestro de Alejandro Magno. Bajó las Ideas a la tierra: la esencia está en las cosas. Todo ser humano busca la felicidad (eudaimonía), que se alcanza con la virtud, el término medio entre dos extremos.',
+  c:'El hombre es por naturaleza un animal político.',cs:'Aristóteles, Política I',p:'¿Se puede ser feliz en solitario?'},
+ {id:'uKK12X_OfRU',e:'cla',inter:true,t:'Merlí',a:'Miss Caffeina',f:'Interludio: aprender a pensar',
+  x:'Merlí es la serie de un profesor de filosofía que sacó a sus alumnos del aula, como Aristóteles con sus «peripatéticos», que filosofaban paseando. La filosofía como forma de vida y de mirar el mundo.',
+  c:'Sapere aude! ¡Ten el valor de servirte de tu propio entendimiento!',cs:'Kant, ¿Qué es la Ilustración?',p:'¿Quién te ha enseñado a pensar por ti mismo o por ti misma?'},
+ {id:'P9PJBwrrwu0',e:'hel',t:'Diógenes',a:'60 Tigres',f:'Diógenes de Sinope',
+  x:'El más famoso de los cínicos vivía en una tinaja, renunciaba a todo lo superfluo y se burlaba de las convenciones sociales. Para él, la felicidad está en la autosuficiencia y en vivir conforme a la naturaleza.',
+  c:'Apártate, que me quitas el sol.',cs:'Respuesta de Diógenes a Alejandro Magno, según Diógenes Laercio',p:'¿Cuántas de las cosas que tienes necesitas de verdad?'},
+ {id:'yQs2QV2Jils',e:'hel',inter:true,t:'Filósofxs Intempestivxs',a:'Biznaga',f:'Interludio: pensar a contracorriente',
+  x:'«Intempestivo» es una palabra de Nietzsche (Consideraciones intempestivas): pensar contra la propia época, no dar por buenas las ideas que todo el mundo repite.',
+  c:'',cs:'',p:'¿Qué idea de nuestra época te gustaría poner en cuestión?'},
+ {id:'1XlwVHISTpE',e:'med',t:'Hypatia',a:'Wray',f:'Hipatia de Alejandría',
+  x:'Matemática, astrónoma y filósofa neoplatónica, dirigió una escuela en Alejandría. Fue asesinada en el año 415 en un clima de violencia religiosa y política. Su figura protagoniza Ágora, la película del ciclo de cine de Bachillerato.',
+  c:'',cs:'',p:'¿Por qué crees que tantas filósofas han quedado fuera de los libros?'},
+ {id:'dF-FY8rqA1I',e:'med',t:'I Dreamed I Saw St. Augustine',a:'Bob Dylan',f:'Agustín de Hipona',
+  x:'Une la fe cristiana y la filosofía platónica. Busca la verdad en el interior del alma («no salgas fuera, vuelve a ti mismo») y reflexiona como nadie sobre el tiempo y la memoria en sus Confesiones.',
+  c:'¿Qué es, pues, el tiempo? Si nadie me lo pregunta, lo sé; si quiero explicárselo a quien me lo pregunta, no lo sé.',cs:'Agustín de Hipona, Confesiones XI, 14',p:'¿Sabrías explicar qué es el tiempo?'},
+ {id:'w3VJCFu2aGE',e:'med',inter:true,t:'Filosofía barata',a:'M-Clan',f:'Interludio: la filosofía de cada día',
+  x:'No toda la filosofía está en los libros: también está en las frases de la vida cotidiana, en lo que nos decimos para seguir adelante. La cuestión es si resiste un examen crítico.',
+  c:'',cs:'',p:'¿Las frases motivadoras de las redes sociales son filosofía?'},
+ {id:'w62zawCrchs',e:'mod',t:'Descartes',a:'Jorge Nasser',f:'René Descartes',
+  x:'Padre de la filosofía moderna. Decide dudar de todo, de los sentidos e incluso de si está soñando, hasta encontrar una verdad indudable: mientras dudo, pienso; y si pienso, existo.',
+  c:'Pienso, luego existo.',cs:'Descartes, Discurso del método IV',p:'¿Cómo sabes que ahora mismo no estás soñando?'},
+ {id:'NnHeB9exu38',e:'mod',inter:true,t:'Los filósofos',a:'ANASOF',f:'Interludio: la gran conversación',
+  x:'La historia de la filosofía es una conversación de siglos: cada pensador responde, discute o corrige a los anteriores. Entramos en la filosofía contemporánea.',
+  c:'',cs:'',p:'Si pudieras cenar con un filósofo o una filósofa, ¿a quién invitarías?'},
+ {id:'O8LtfwJ22wQ',e:'con',t:'Marx & Engels',a:'Belle and Sebastian',f:'Karl Marx y Friedrich Engels',
+  x:'Autores del Manifiesto comunista (1848). La historia está movida por la lucha de clases y por las condiciones materiales de vida. En el capitalismo, el trabajador queda alienado de lo que produce.',
+  c:'Los filósofos no han hecho más que interpretar de diversos modos el mundo; de lo que se trata es de transformarlo.',cs:'Marx, Tesis sobre Feuerbach, XI',p:'¿La filosofía debe explicar el mundo o cambiarlo?'},
+ {id:'9rlQNalmu04',e:'con',t:'La mirada de Freud',a:'Luis Alberto Spinetta',f:'Sigmund Freud',
+  x:'Creador del psicoanálisis. Gran parte de lo que pensamos y deseamos es inconsciente. Junto a Marx y Nietzsche, es uno de los «maestros de la sospecha»: nada es lo que parece.',
+  c:'El yo no es dueño en su propia casa.',cs:'Freud, Una dificultad del psicoanálisis (1917)',p:'¿Sabes de verdad por qué haces lo que haces?'},
+ {id:'1bzPJY7bCZM',e:'con',t:'Nietzsche es mi fetiche',a:'Estrogenuinas',f:'Friedrich Nietzsche',
+  x:'Anuncia la «muerte de Dios» y propone crear nuevos valores que afirmen la vida, frente a los que la niegan. El superhombre y el eterno retorno son sus grandes imágenes. Y amaba la música.',
+  c:'Sin música, la vida sería un error.',cs:'Nietzsche, Crepúsculo de los ídolos',p:'¿Vivirías tu vida igual si tuvieras que repetirla eternamente?'},
+ {id:'kpxwjgkjv7Y',e:'con',t:'Requiem for Martin Heidegger',a:'Panic',f:'Martin Heidegger',
+  x:'En Ser y tiempo (1927) se pregunta por el sentido del ser a partir de la existencia humana (Dasein), un «ser-para-la-muerte» que puede vivir de forma auténtica o perdida en lo que «se» dice y «se» hace. Su afiliación al partido nazi sigue generando debate.',
+  c:'El lenguaje es la casa del ser.',cs:'Heidegger, Carta sobre el humanismo',p:'¿Qué cambia en tu vida si piensas que es finita?'},
+ {id:'DfshTQKV1zU',e:'con',t:'Albert Camus',a:'Tom Rosenthal',f:'Albert Camus',
+  x:'La vida es absurda: buscamos un sentido que el mundo no nos da. Pero la respuesta no es rendirse, sino la rebelión: vivir con lucidez y pasión. Como Sísifo empujando su roca.',
+  c:'Hay que imaginarse a Sísifo feliz.',cs:'Camus, El mito de Sísifo',p:'Si la vida no trae un sentido de serie, ¿puedes dárselo tú?'},
+ {id:'qaO32KkFHXA',e:'con',t:'Sartre en la tele',a:'Matilda',f:'Jean-Paul Sartre',
+  x:'Existencialista: en el ser humano la existencia precede a la esencia. No nacemos con un destino fijado; somos lo que hacemos con nuestra libertad, y somos responsables de ello. Compañero de Simone de Beauvoir.',
+  c:'El hombre está condenado a ser libre.',cs:'Sartre, El existencialismo es un humanismo',p:'¿Eres responsable de todo lo que eliges?'},
+ {id:'ao69pxXc4iI',e:'con',t:'Estoy Foucault',a:'Release',f:'Michel Foucault',
+  x:'Estudió cómo funciona el poder: no solo reprime, también nos moldea a través de la vigilancia, las normas y las instituciones (cárceles, escuelas, hospitales). El panóptico es su gran imagen.',
+  c:'Donde hay poder, hay resistencia.',cs:'Foucault, Historia de la sexualidad I',p:'¿Son las redes sociales un panóptico?'},
+ {id:'l0Wfm0QwzcY',e:'ci',t:'Filosofía y Letras',a:'Violadores del Verso',f:'Cierre: la palabra como herramienta',
+  x:'Cerramos con rap: la palabra como arma para pensar, criticar y contar quiénes somos. La historia de la filosofía no termina aquí: la escribís vosotros.',
+  c:'',cs:'',p:'¿Qué canción añadirías tú a este disco?'}
+];
+T.forEach((t,i)=>t.i=i+1);
+
+let cur=0, player=null, ready=false, playing=false;
+const $=id=>document.getElementById(id);
+function renderList(){
+  let h='',last='';
+  T.forEach((t,i)=>{
+    if(t.e!==last){last=t.e;h+=`<div class="sec" style="--c:${ERAS[t.e].c}">${ERAS[t.e].n}</div>`;}
+    h+=`<div class="tr${t.inter?' inter':''}" data-i="${i}" style="--c:${ERAS[t.e].c}"><div class="num">${t.i}</div><div><div class="tt">${t.t}</div><div class="ar">${t.a}</div></div><div class="ph">${t.inter?'Interludio':t.f}</div></div>`;
+  });
+  $('list').innerHTML=h;
+  $('list').querySelectorAll('.tr').forEach(el=>el.onclick=()=>{go(+el.dataset.i,true)});
+}
+function renderCard(){
+  const t=T[cur], er=ERAS[t.e];
+  document.documentElement.style.setProperty('--era',er.c);
+  $('lnum').textContent=t.i; $('lera').textContent=t.inter?'Interludio':er.n.replace(/^[IVX]+ · /,'');
+  $('ntitle').textContent=`${t.i}. ${t.t}`; $('nartist').textContent=t.a;
+  $('card').innerHTML=`<span class="era">${t.inter?'Interludio · ':''}${er.n}</span><h2>${t.f}</h2><div class="song">Pista ${t.i} · «${t.t}» · ${t.a}</div><p>${t.x}</p>${t.c?`<blockquote>«${t.c}»<small>${t.cs}</small></blockquote>`:''}<div class="q"><span>?</span><div>${t.p}</div></div><a class="yt" href="https://www.youtube.com/watch?v=${t.id}" target="_blank" rel="noopener">Escuchar en YouTube ↗</a>`;
+  $('err').style.display='none';
+  document.querySelectorAll('.tr').forEach(el=>el.classList.toggle('on',+el.dataset.i===cur));
+}
+function setPlaying(p){playing=p;$('vinyl').classList.toggle('spin',p);$('arm').classList.toggle('on',p);$('play').textContent=p?'⏸':'▶';}
+function go(i,autoplay){
+  cur=(i+T.length)%T.length; renderCard();
+  if(ready){autoplay?player.loadVideoById(T[cur].id):player.cueVideoById(T[cur].id);}
+  const on=document.querySelector('.tr.on'); if(on&&autoplay) on.scrollIntoView({block:'nearest',behavior:'smooth'});
+}
+$('prev').onclick=()=>go(cur-1,true);
+$('next').onclick=()=>go(cur+1,true);
+$('play').onclick=()=>{ if(!ready) return; playing?player.pauseVideo():player.playVideo(); };
+window.onYouTubeIframeAPIReady=function(){
+  player=new YT.Player('yt',{videoId:T[0].id,playerVars:{rel:0,modestbranding:1,playsinline:1,...(location.protocol.startsWith('http')?{origin:location.origin}:{})},
+    events:{onReady:()=>{ready=true;},
+      onStateChange:e=>{ if(e.data===YT.PlayerState.PLAYING) setPlaying(true);
+        else if(e.data===YT.PlayerState.ENDED){ setPlaying(false); go(cur+1,true);}
+        else if(e.data===YT.PlayerState.PAUSED||e.data===YT.PlayerState.CUED) setPlaying(false); },
+      onError:()=>{ setPlaying(false); $('err').style.display='block'; }}});
+};
+renderList(); renderCard();
+if(location.protocol==='file:') $('local').style.display='block';
+const s=document.createElement('script'); s.src='https://www.youtube.com/iframe_api'; document.head.appendChild(s);
+</script>
+</body>
+</html>
+
